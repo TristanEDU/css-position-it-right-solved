@@ -2,12 +2,75 @@
 }
 
 .robot-face-shape {
+  position: relative;
+  top: 25vh;
+  left: 35vw;
+  bottom: 25vh;
+  right: 35vw;
+  border: 5px red solid;
+  border-radius: 10px;
+  width: 30vw;
+  height: 50vh;
 }
 
 .robot-eye-left {
+  width: fit-content;
+  overflow: hidden;
+  padding: 2%;
+  margin: 5%;
+}
+
+.robot-eye-left #star-five {
+  margin: 2.5vw 0;
+  position: relative;
+  display: block;
+  color: rgb(0, 102, 255);
+  width: 0;
+  height: 0;
+  border-right: 5vw solid transparent;
+  border-bottom: 3.5vw solid rgba(94, 255, 0, 0.521);
+  border-left: 5vw solid transparent;
+  transform: rotate(35deg);
+}
+
+.robot-eye-left #star-five:before {
+  border-bottom: 4vw solid rgb(247, 0, 255);
+  border-left: 1.5vw solid transparent;
+  border-right: 1.5vw solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -2.25vw;
+  left: -3.25vw;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+
+.robot-eye-left #star-five:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 0.15vw;
+  left: -5.25vw;
+  width: 0;
+  height: 0;
+  border-right: 5vw solid transparent;
+  border-bottom: 3.5vw solid rgba(255, 0, 0, 0.493);
+  border-left: 5vw solid transparent;
+  transform: rotate(-70deg);
+  content: "";
 }
 
 .robot-eye-right {
+  position: relative;
+  left: 100%;
+  width: 11.2vw;
+  height: 26.92vh;
+  background-image: url("./../assets/images/76191796-vector-data-flow-visualization-grayscale-big-data-flow-as-binary-numbers-strings-twisted-in-infinity.jpg");
+  background-position: center;
+  background-size: contain;
+  border-radius: 75%;
 }
 
 .robot-ear-left {
