@@ -1,4 +1,5 @@
 .robot-container {
+  font-size: 1vw;
 }
 
 .robot-face-shape {
@@ -10,12 +11,17 @@
   border: 5px red solid;
   border-radius: 10px;
   width: 30vw;
-  height: 50vh;
+  height: 60vh;
 }
 
 .robot-eye-left {
-  width: fit-content;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11.2vw;
+  height: 24.92vh;
+  /* width: fit-content; */
+  /* overflow: hidden; */
   padding: 2%;
   margin: 5%;
 }
@@ -63,14 +69,17 @@
 }
 
 .robot-eye-right {
-  position: relative;
-  left: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 11.2vw;
-  height: 26.92vh;
+  height: 24.92vh;
   background-image: url("./../assets/images/76191796-vector-data-flow-visualization-grayscale-big-data-flow-as-binary-numbers-strings-twisted-in-infinity.jpg");
   background-position: center;
   background-size: contain;
-  border-radius: 75%;
+  border-radius: 50%;
+  padding: 2%;
+  margin: 5%;
 }
 
 .robot-ear-left {
@@ -80,18 +89,66 @@
 }
 
 .robot-nose {
+  position: absolute;
+  top: 28vh;
+  left: 12vw;
+  width: 0;
+  height: 0;
+  border-left: 3vw solid transparent;
+  border-right: 3vw solid transparent;
+  border-bottom: 7vh solid red;
 }
 
 .robot-teeth {
+  position: absolute;
+  top: 40vh;
+  left: 7.5vw;
+  width: 15vw;
+  height: 8vh;
+  border: 7px solid red;
 }
 
 .robot-tooth {
+  width: 0;
+  height: 0;
+  border-left: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+  border-top: 11vh solid white;
+}
+
+#tooth1 {
+  position: absolute;
+  left: 15%;
+}
+
+#tooth2 {
+  position: absolute;
+  right: 15%;
+}
+
+.droplet {
 }
 
 .robot-hair-style {
+  position: relative;
+  left: 46vw;
+  top: -50vh;
 }
 
 .robot-hair-one {
+  box-shadow: 0 0 0 1em red, 0 1em 0 1em red, -2.5em 1.5em 0 0.5em red,
+    2.5em 1.5em 0 0.5em red, -3em -3em 0 0 red, 3em -3em 0 0 red,
+    -2em -2em 0 0 red, 2em -2em 0 0 red, -3em -1em 0 0 red, -2em -1em 0 0 red,
+    2em -1em 0 0 red, 3em -1em 0 0 red, -4em 0 0 0 red, -3em 0 0 0 red,
+    3em 0 0 0 red, 4em 0 0 0 red, -5em 1em 0 0 red, -4em 1em 0 0 red,
+    4em 1em 0 0 red, 5em 1em 0 0 red, -5em 2em 0 0 red, 5em 2em 0 0 red,
+    -5em 3em 0 0 red, -3em 3em 0 0 red, 3em 3em 0 0 red, 5em 3em 0 0 red,
+    -2em 4em 0 0 red, -1em 4em 0 0 red, 1em 4em 0 0 red, 2em 4em 0 0 red;
+  background: red;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  margin: 50px 0 70px 65px;
 }
 
 .robot-hair-two {
