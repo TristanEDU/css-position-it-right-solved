@@ -3,7 +3,7 @@
 }
 
 .robot-face-shape {
-  position: relative;
+  position: fixed;
   top: 25vh;
   left: 35vw;
   bottom: 25vh;
@@ -83,6 +83,10 @@
 }
 
 .robot-ear-left {
+  position: fixed;
+  top: 40vh;
+  /* left: 24.4vw; */
+  right: 61vw;
 }
 /* HTML: <div class="tooltip">This is a Tooltip with a border and a border radius. Border and background have a gradient coloration </div> */
 .tooltip {
@@ -154,6 +158,28 @@
 }
 
 .robot-ear-right {
+  rotate: 90deg;
+  position: fixed;
+  top: 30vh;
+  left: 59vw;
+  --n: 4; /* number of bars */
+
+  height: 280px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --s: calc(100% / (2 * var(--n) - 1));
+  background: repeating-radial-gradient(
+    50% 50%,
+    #0000 0,
+    #178feb 1px calc(var(--s) - 1px),
+    #0000 var(--s) calc(2 * var(--s))
+  );
+  mask: conic-gradient(#000 0 0) no-repeat 50% / var(--s) var(--s),
+    conic-gradient(
+      from -45deg at 50% calc(50% + var(--s) / 2),
+      #000 90deg,
+      #0000 0
+    );
 }
 
 .robot-nose {
@@ -202,7 +228,7 @@
   position: fixed;
   overflow: visible;
   left: 46.5vw;
-  top: 10vh;
+  bottom: 76vh;
   /* top: 100px; */
 }
 
