@@ -1,0 +1,245 @@
+.robot-eye-right {
+  animation: Rotate 0.5s infinite linear;
+}
+
+.robot-eye-right:hover {
+  animation: Rotate 0.5s infinite linear, grow 10s infinite linear;
+}
+
+.robot-eye-left {
+  animation: disappear, Rotate 50ms infinite linear;
+}
+
+#tooth1 {
+  animation: move-teeth 0.1s infinite linear alternate;
+}
+#tooth2 {
+  animation: move-teeth-inverted 0.1s infinite linear alternate-reverse;
+}
+
+.robot-nose {
+  animation: pulse-glow 1s infinite;
+}
+
+.robot-ear-right {
+  animation: wifan 1ms infinite linear;
+}
+
+body {
+  animation: eyeball-hurts 1s 40s infinite alternate linear;
+}
+
+.robot-ear-left {
+  animation: glow 3s infinite linear;
+}
+
+.robot-hair-one {
+  animation: Rotate 20s infinite;
+}
+
+@keyframes Rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+  }
+
+  to {
+    width: 1000px;
+    height: 1000px;
+    z-index: 9999;
+  }
+}
+
+@keyframes move-teeth {
+  from {
+    border-top: 11vh solid red;
+    transform: translateX(-50px);
+  }
+
+  to {
+    border-top: 11vh solid blue;
+    transform: translateX(160px);
+  }
+}
+
+@keyframes move-teeth-inverted {
+  from {
+    border-top: 11vh solid blue;
+    transform: translateX(-160px);
+  }
+
+  to {
+    border-top: 11vh solid red;
+    transform: translateX(50px);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: none;
+  }
+  10% {
+    box-shadow: -50px -50px 40px red, -50px 50px 40px red, 50px -50px 40px red,
+      50px 50px 40px red;
+  }
+  20% {
+    box-shadow: -50px -50px 40px blue, -50px 50px 40px blue,
+      50px -50px 40px blue, 50px 50px 40px blue;
+  }
+  30% {
+    box-shadow: -50px -50px 40px green, -50px 50px 40px green,
+      50px -50px 40px green, 50px 50px 40px green;
+  }
+  40% {
+    box-shadow: -50px -50px 40px yellow, -50px 50px 40px yellow,
+      50px -50px 40px yellow, 50px 50px 40px yellow;
+  }
+  50% {
+    box-shadow: -50px -50px 40px magenta, -50px 50px 40px magenta,
+      50px -50px 40px magenta, 50px 50px 40px magenta;
+  }
+  60% {
+    box-shadow: -50px -50px 40px cyan, -50px 50px 40px cyan,
+      50px -50px 40px cyan, 50px 50px 40px cyan;
+  }
+  70% {
+    box-shadow: -50px -50px 40px orange, -50px 50px 40px orange,
+      50px -50px 40px orange, 50px 50px 40px orange;
+  }
+  80% {
+    box-shadow: -50px -50px 40px violet, -50px 50px 40px violet,
+      50px -50px 40px violet, 50px 50px 40px violet;
+  }
+  90% {
+    box-shadow: -50px -50px 40px white, -50px 50px 40px white,
+      50px -50px 40px white, 50px 50px 40px white;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes wifan {
+  from {
+    rotate: 43deg;
+  }
+
+  to {
+    rotate: 136deg;
+  }
+}
+
+@keyframes eyeball-hurts {
+  0% {
+    background-color: black;
+  }
+  10% {
+    background-color: red;
+  }
+  20% {
+    background-color: white;
+  }
+  30% {
+    background-color: blue;
+  }
+  40% {
+    background-color: hotpink;
+  }
+  50% {
+    background-color: green;
+  }
+  60% {
+    background-color: blueviolet;
+  }
+  70% {
+    background-color: yellow;
+  }
+  80% {
+    background-color: white;
+  }
+  90% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: -15px -15px 15px red;
+  }
+}
+
+.neon-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #000;
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e,
+    0 0 40px #ff005e, 0 0 80px #ff005e;
+  animation: glow2 30s 1 alternate forwards;
+}
+
+@keyframes glow2 {
+  0% {
+    z-index: 99999;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e,
+      0 0 40px #ff005e, 0 0 80px #ff005e;
+  }
+  90% {
+    z-index: 999999;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff,
+      0 0 80px #00d4ff, 0 0 160px #00d4ff;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.robot-container {
+  animation: content-hide 33s forwards;
+}
+
+@keyframes content-hide {
+  0% {
+    z-index: -999;
+    display: none;
+  }
+
+  100% {
+    z-index: -999;
+    display: block;
+  }
+}
