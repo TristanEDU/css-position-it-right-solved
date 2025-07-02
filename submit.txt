@@ -1,4 +1,1 @@
-I would like to note that while I did do my best to make it responsive to screen sizing in order to see it as it was created please view it with '1920 x 991' Thank you!
-
-Also I would like to note that while I am aware of the w3c errors to the best of my ability to determine the [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/rotate) property does exist and as far as I can tell the other issues are done correctly as well although I am less sure on those.
 https://github.com/TristanEDU/css-position-it-right-solved
